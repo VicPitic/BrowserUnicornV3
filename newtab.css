@@ -1,0 +1,66 @@
+/* Newtab.css - CSS for new tab page */
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.grid-container {
+    display: flex;
+    gap: 10px;
+}
+
+.websiteContainer {
+    display: inline;
+    width: auto;
+    width: 33%;
+    height: 500px;
+    align-items: center;
+    resize: both;
+    overflow: auto;
+    position: relative;
+    /* Added position: absolute for drag handle */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.widthInput,
+.heightInput {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.website {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    min-width: 0;
+}
+
+/* Styles for drag handle */
+.drag-handle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    cursor: move;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #dddddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resize-handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #007bff;
+    bottom: 0;
+    right: 0;
+    cursor: nwse-resize;
+}

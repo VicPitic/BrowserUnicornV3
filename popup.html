@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SpiderTab Popup</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div id="loginContainer">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <button type="button" id="loginButton">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="toggleSignUp">Sign Up</a></p>
+    </div>
+
+    <div id="signupContainer" style="display: none;">
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required />
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required />
+            <button type="button" id="signupButton">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" id="toggleLogin">Log In</a></p>
+    </div>
+
+    <div id="contentContainer" style="display: none;">
+        <header>
+            <button style="width: 100%;" id="yoho" type="submit">Upgrade</button>
+            <h1>&#129412; Browser Unicorn</h1>
+            <div id="toggleContainer">
+                <label class="switch">
+                    <input type="checkbox" id="toggleSwitch" checked="false" />
+                    <span class="slider round"></span>
+                </label>
+                <span id="toggleText">Toggle On/Off</span>
+            </div>
+        </header>
+        <section>
+            <h2>Add Websites</h2>
+            <form id="addWebsiteForm">
+                <label for="websiteInput">Website URL:</label>
+                <input type="text" id="websiteInput" name="websiteInput" />
+                <button type="submit">Add Website</button>
+            </form>
+            <h2>Website List</h2>
+            <ul id="websiteList"></ul>
+        </section>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
